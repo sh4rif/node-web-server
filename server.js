@@ -49,6 +49,12 @@ app.get("/about", (req, res) => {
   res.render("about.hbs", data);
 });
 
+app.get("/projects", (req, res) => {
+  data.pageTitle = "Projects Page";
+  data.welcomeMessage = "Portfolio page here";
+  res.render("projects.hbs", data);
+});
+
 app.get("/bad", (req, res) => {
   res.send({
     errorMessage: "Unable to handle request."
